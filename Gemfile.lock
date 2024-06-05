@@ -2,9 +2,13 @@ GEM
   remote: https://rubygems.org/
   specs:
     bigdecimal (3.1.8)
+    mini_portile2 (2.8.7)
     rake (13.2.1)
     sequel (5.81.0)
       bigdecimal
+    sqlite3 (2.0.2)
+      mini_portile2 (~> 2.8.0)
+    sqlite3 (2.0.2-x86_64-linux-gnu)
     timers (4.3.5)
 
 PLATFORMS
@@ -14,6 +18,7 @@ PLATFORMS
 DEPENDENCIES
   rake
   sequel
+  sqlite3
   timers
 
 BUNDLED WITH
