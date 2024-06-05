@@ -4,3 +4,4 @@ source "https://rubygems.org"
 
 gem 'timers'
 gem 'sequel'
+gem 'rake'
