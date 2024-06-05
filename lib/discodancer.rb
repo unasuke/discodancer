@@ -1,0 +1,2 @@
+class Discodancer
+end
