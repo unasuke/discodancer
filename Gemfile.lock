@@ -2,24 +2,52 @@ GEM
   remote: https://rubygems.org/
   specs:
     bigdecimal (3.1.8)
+    faraday (2.9.1)
+      faraday-net_http (>= 2.0, < 3.2)
+    faraday-net_http (3.1.0)
+      net-http
     mini_portile2 (2.8.7)
+    net-http (0.4.1)
+      uri
+    pastel (0.8.0)
+      tty-color (~> 0.5)
     rake (13.2.1)
+    rexml (3.2.8)
+      strscan (>= 3.0.9)
+    rss (0.3.0)
+      rexml
     sequel (5.81.0)
       bigdecimal
     sqlite3 (2.0.2)
       mini_portile2 (~> 2.8.0)
     sqlite3 (2.0.2-x86_64-linux-gnu)
+    strscan (3.1.0)
     timers (4.3.5)
+    tty-color (0.6.0)
+    tty-cursor (0.7.1)
+    tty-prompt (0.23.1)
+      pastel (~> 0.8)
+      tty-reader (~> 0.8)
+    tty-reader (0.9.0)
+      tty-cursor (~> 0.7)
+      tty-screen (~> 0.8)
+      wisper (~> 2.0)
+    tty-screen (0.8.2)
+    uri (0.13.0)
+    wisper (2.0.1)
 
 PLATFORMS
   ruby
   x86_64-linux
 
 DEPENDENCIES
+  faraday
   rake
+  rss
   sequel
   sqlite3
   timers
+  tty-prompt
 
 BUNDLED WITH
    2.5.11
