@@ -1,8 +1,8 @@
 require 'logger'
-require_relative 'lib/discodancer'
 
 desc 'Setup discodancer'
 task :setup do
+  require_relative 'lib/discodancer'
   Discodancer::Commands.setup
 end
 
@@ -15,4 +15,9 @@ task :migrate, [:version] do |t, args|
   Sequel.connect('sqlite://discodancer.db', logger: Logger.new($stderr)) do |db|
     Sequel::Migrator.run(db, 'lib/migrations', target: version)
   end
+end
+
+task :console do
+  require_relative 'lib/discodancer'
+  Discodancer::Commands.console
 end
