@@ -1,8 +1,8 @@
 require 'sequel'
 
 class Discodancer
-  class Website < Sequel::Model
-    many_to_many :webhooks
+  class Webhook < Sequel::Model
+    many_to_many :websites
 
     def before_create
       self.created_at ||= Time.now
@@ -10,7 +10,7 @@ class Discodancer
     end
 
     def before_destroy
-      DB[:webhooks_websites].where(website_id: self.id).delete
+      DB[:webhooks_websites].where(webhook_id: self.id).delete
       super
     end
   end
