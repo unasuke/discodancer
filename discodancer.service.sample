@@ -1,0 +1,12 @@
+[Unit]
+Description=The toy feed crawler
+
+[Service]
+Type=simple
+Restart=always
+Environment="PATH=%h/.asdf/shims:%h/.asdf/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/:usr/sbin"
+ExecStart=%h/path/to/here/app.rb
+WorkingDirectory=%h/path/to/here
+
+[Install]
+WantedBy=default.target
