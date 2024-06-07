@@ -23,7 +23,10 @@ class Discodancer
     end
 
     def fetch_feed
-      RSS::Parser.parse(Faraday.get(self.url).body)
+      response = Faraday.get(self.url) do |request|
+        request.headers['User-Agent'] = 'Discodancer https://github.com/unasuke/discodancer'
+      end
+      RSS::Parser.parse(response.body)
     end
   end
 end
