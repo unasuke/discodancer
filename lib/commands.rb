@@ -92,7 +92,7 @@ class Discodancer
           break if url == 'exit'
           response = Faraday.get(url)
           feed =  RSS::Parser.parse(response.body)
-          website = Website.new(name: "#{feed.title.content} #{feed.id.content}", url: url)
+          website = Website.new(name: "#{feed.title.content}", url: url)
           prompt.say <<~EOF
           Website name : #{website.name}
           Feed URL : #{website.url}
