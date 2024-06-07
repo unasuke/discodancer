@@ -10,6 +10,7 @@ require_relative 'crawler'
 class Discodancer
   def initialize
     @db = DB
+    $stdout.sync = true
     @logger = Logger.new($stdout)
     @crawler = Crawler.new(db: @db, logger: @logger)
     @timers = Timers::Group.new
