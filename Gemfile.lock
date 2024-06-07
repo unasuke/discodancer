@@ -10,6 +10,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     bigdecimal (3.1.8)
+    crass (1.0.6)
     faraday (2.9.1)
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
@@ -17,11 +18,20 @@ GEM
     mini_portile2 (2.8.7)
     net-http (0.4.1)
       uri
+    nokogiri (1.16.5)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
+    nokogiri (1.16.5-x86_64-linux)
+      racc (~> 1.4)
     pastel (0.8.0)
       tty-color (~> 0.5)
+    racc (1.8.0)
     rake (13.2.1)
     rexml (3.2.8)
       strscan (>= 3.0.9)
+    sanitize (6.1.0)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.12.0)
     sequel (5.81.0)
       bigdecimal
     sqlite3 (2.0.2)
@@ -50,6 +60,7 @@ DEPENDENCIES
   faraday
   rake
   rss!
+  sanitize
   sequel
   sqlite3
   timers
