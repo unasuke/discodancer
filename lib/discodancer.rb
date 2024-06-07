@@ -23,6 +23,7 @@ class Discodancer
       exit
     end
 
+    @logger.info 'Discodancer started'
     loop { @timers.wait }
   end
 end
