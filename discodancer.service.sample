@@ -5,6 +5,7 @@ Description=The toy feed crawler
 Type=simple
 Restart=always
 Environment="PATH=%h/.asdf/shims:%h/.asdf/bin:/usr/local/bin:/usr/local/sbin:/usr/bin/:usr/sbin"
+Environment=DISCODANCER_CRAWL_INTERVAL_SECOND=60
 ExecStart=%h/path/to/here/app.rb
 WorkingDirectory=%h/path/to/here
 

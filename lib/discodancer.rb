@@ -17,7 +17,7 @@ class Discodancer
   end
 
   def run
-    @timers.every(10) { @crawler.crawl }
+    @timers.every(ENV.fetch('DISCODANCER_CRAWL_INTERVAL_SECOND', 10).to_i) { @crawler.crawl }
 
     Signal.trap(:INT) do
       @timers.cancel
