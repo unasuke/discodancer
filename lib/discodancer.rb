@@ -17,6 +17,12 @@ class Discodancer
 
   def run
     @timers.every(10) { @crawler.crawl }
+
+    Signal.trap(:INT) do
+      @timers.cancel
+      exit
+    end
+
     loop { @timers.wait }
   end
 end
