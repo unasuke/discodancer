@@ -26,7 +26,7 @@ class Discodancer
       response = Faraday.get(self.url) do |request|
         request.headers['User-Agent'] = 'Discodancer https://github.com/unasuke/discodancer'
       end
-      RSS::Parser.parse(response.body)
+      RSS::Parser.parse(response.body, false)
     end
   end
 end
