@@ -10,3 +10,4 @@ gem 'faraday'
 gem 'rss', github: 'unasuke/rss', branch: 'ietf-feed-datetime'
 gem 'tty-prompt'
 gem 'sanitize'
+gem "reline"

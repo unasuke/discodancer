@@ -17,28 +17,25 @@ GEM
       logger
     faraday-net_http (3.4.4)
       net-http (~> 0.5)
+    io-console (0.8.2)
     json (2.19.9)
     logger (1.7.0)
-    mini_portile2 (2.8.9)
     net-http (0.9.1)
       uri (>= 0.11.1)
-    nokogiri (1.19.4)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
     pastel (0.8.0)
       tty-color (~> 0.5)
     racc (1.8.1)
     rake (13.4.2)
+    reline (0.6.3)
+      io-console (~> 0.5)
     rexml (3.4.4)
     sanitize (7.0.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.16.8)
     sequel (5.105.0)
       bigdecimal
-    sqlite3 (2.9.5)
-      mini_portile2 (~> 2.8.0)
     sqlite3 (2.9.5-x86_64-linux-gnu)
     timers (4.4.0)
     tty-color (0.6.0)
@@ -55,12 +52,12 @@ GEM
     wisper (2.0.1)
 
 PLATFORMS
-  ruby
   x86_64-linux
 
 DEPENDENCIES
   faraday
   rake
+  reline
   rss!
   sanitize
   sequel
@@ -74,20 +71,19 @@ CHECKSUMS
   crass (1.0.6) sha256=dc516022a56e7b3b156099abc81b6d2b08ea1ed12676ac7a5657617f012bd45d
   faraday (2.14.3) sha256=1882247e6766615c8220b4392bf1d27f6ebb63d8e28267587cef1fb0bf37f278
   faraday-net_http (3.4.4) sha256=0e78af151747ed1b00f33e25973b4bc220d7f16c00c39676817c8b12331eb588
+  io-console (0.8.2) sha256=d6e3ae7a7cc7574f4b8893b4fca2162e57a825b223a177b7afa236c5ef9814cc
   json (2.19.9) sha256=9b9025b7cdddafa38d316eca0b2358488e42d417045c1b90d216a9fefe46b79a
   logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
-  mini_portile2 (2.8.9) sha256=0cd7c7f824e010c072e33f68bc02d85a00aeb6fce05bb4819c03dfd3c140c289
   net-http (0.9.1) sha256=25ba0b67c63e89df626ed8fac771d0ad24ad151a858af2cc8e6a716ca4336996
-  nokogiri (1.19.4) sha256=50c951611c92bca05c51411aef45f1cbc50f2821c4802758c5c6d34696533ab5
   nokogiri (1.19.4-x86_64-linux-gnu) sha256=379fae440b28915e3f19d752ce2dcf8465ed2b2fbefd2a7ca0dd497bc981a06a
   pastel (0.8.0) sha256=481da9fb7d2f6e6b1a08faf11fa10363172dc40fd47848f096ae21209f805a75
   racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
   rake (13.4.2) sha256=cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701
+  reline (0.6.3) sha256=1198b04973565b36ec0f11542ab3f5cfeeec34823f4e54cebde90968092b1835
   rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
   rss (0.3.1)
   sanitize (7.0.0) sha256=269d1b9d7326e69307723af5643ec032ff86ad616e72a3b36d301ac75a273984
   sequel (5.105.0) sha256=4191d5e5d011b7229ff8a3401ca6beac047c4d35b1ec6703376513b4b25b2e67
-  sqlite3 (2.9.5) sha256=04572973a3f943ad50a8adfffc8dd752a5f06e4c3db2026f71838fed8a982606
   sqlite3 (2.9.5-x86_64-linux-gnu) sha256=233dbcb6714148dd23bc5aeb33e8efd6eac974969564ddd5794c23d5f52b231e
   timers (4.4.0) sha256=a92f43cbec26219b17a52c86501557486569bd5d01975cbca4315203cfc0ade7
   tty-color (0.6.0) sha256=6f9c37ca3a4e2367fb2e6d09722762647d6f455c111f05b59f35730eeb24332a
