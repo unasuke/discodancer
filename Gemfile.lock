@@ -9,36 +9,38 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    bigdecimal (3.1.8)
+    bigdecimal (4.1.2)
     crass (1.0.6)
-    faraday (2.9.1)
-      faraday-net_http (>= 2.0, < 3.2)
-    faraday-net_http (3.1.0)
-      net-http
-    mini_portile2 (2.8.7)
-    net-http (0.4.1)
-      uri
-    nokogiri (1.16.5)
+    faraday (2.14.3)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-net_http (3.4.4)
+      net-http (~> 0.5)
+    json (2.19.9)
+    logger (1.7.0)
+    mini_portile2 (2.8.9)
+    net-http (0.9.1)
+      uri (>= 0.11.1)
+    nokogiri (1.19.4)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.16.5-x86_64-linux)
+    nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
     pastel (0.8.0)
       tty-color (~> 0.5)
-    racc (1.8.0)
-    rake (13.2.1)
-    rexml (3.2.8)
-      strscan (>= 3.0.9)
-    sanitize (6.1.0)
+    racc (1.8.1)
+    rake (13.4.2)
+    rexml (3.4.4)
+    sanitize (7.0.0)
       crass (~> 1.0.2)
-      nokogiri (>= 1.12.0)
-    sequel (5.81.0)
+      nokogiri (>= 1.16.8)
+    sequel (5.105.0)
       bigdecimal
-    sqlite3 (2.0.2)
+    sqlite3 (2.9.5)
       mini_portile2 (~> 2.8.0)
-    sqlite3 (2.0.2-x86_64-linux-gnu)
-    strscan (3.1.0)
-    timers (4.3.5)
+    sqlite3 (2.9.5-x86_64-linux-gnu)
+    timers (4.4.0)
     tty-color (0.6.0)
     tty-cursor (0.7.1)
     tty-prompt (0.23.1)
@@ -49,7 +51,7 @@ GEM
       tty-screen (~> 0.8)
       wisper (~> 2.0)
     tty-screen (0.8.2)
-    uri (0.13.0)
+    uri (1.1.1)
     wisper (2.0.1)
 
 PLATFORMS
@@ -67,32 +69,33 @@ DEPENDENCIES
   tty-prompt
 
 CHECKSUMS
-  bigdecimal (3.1.8) sha256=a89467ed5a44f8ae01824af49cbc575871fa078332e8f77ea425725c1ffe27be
+  bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
   bundler (4.0.14) sha256=d09a0a965cf772266a7e49e83610be7c2f4e49e61134c42a56804bb383cc24b8
   crass (1.0.6) sha256=dc516022a56e7b3b156099abc81b6d2b08ea1ed12676ac7a5657617f012bd45d
-  faraday (2.9.1) sha256=8ffbc8aaa28509dc31edd57f27a9e49250a283caf0d04090667a3264895b168a
-  faraday-net_http (3.1.0) sha256=1627be414960d0131691190ff524506ba6607402a50fb6eccda9e64ca60f859f
-  mini_portile2 (2.8.7) sha256=13eef5ab459bbfd33d61e539564ec25a9c2cf593b0a5ea6d4d7ef8c19b162ee0
-  net-http (0.4.1) sha256=a96efc5ea18bcb9715e24dda4159d10f67ff0345c8a980d04630028055b2c282
-  nokogiri (1.16.5) sha256=ec36162c68984fa0a90a5c4ae7ab7759460639e716cc1ce75f34c3cb54158ad2
-  nokogiri (1.16.5-x86_64-linux) sha256=0ca238da870066bed2f7837af6f35791bb9b76c4c5638999c46aac44818a6a97
+  faraday (2.14.3) sha256=1882247e6766615c8220b4392bf1d27f6ebb63d8e28267587cef1fb0bf37f278
+  faraday-net_http (3.4.4) sha256=0e78af151747ed1b00f33e25973b4bc220d7f16c00c39676817c8b12331eb588
+  json (2.19.9) sha256=9b9025b7cdddafa38d316eca0b2358488e42d417045c1b90d216a9fefe46b79a
+  logger (1.7.0) sha256=196edec7cc44b66cfb40f9755ce11b392f21f7967696af15d274dde7edff0203
+  mini_portile2 (2.8.9) sha256=0cd7c7f824e010c072e33f68bc02d85a00aeb6fce05bb4819c03dfd3c140c289
+  net-http (0.9.1) sha256=25ba0b67c63e89df626ed8fac771d0ad24ad151a858af2cc8e6a716ca4336996
+  nokogiri (1.19.4) sha256=50c951611c92bca05c51411aef45f1cbc50f2821c4802758c5c6d34696533ab5
+  nokogiri (1.19.4-x86_64-linux-gnu) sha256=379fae440b28915e3f19d752ce2dcf8465ed2b2fbefd2a7ca0dd497bc981a06a
   pastel (0.8.0) sha256=481da9fb7d2f6e6b1a08faf11fa10363172dc40fd47848f096ae21209f805a75
-  racc (1.8.0) sha256=09349a65c37c4fe710a435f25c9f1652e39f29ad6b1fa08d4a8d30c0553d3a08
-  rake (13.2.1) sha256=46cb38dae65d7d74b6020a4ac9d48afed8eb8149c040eccf0523bec91907059d
-  rexml (3.2.8) sha256=0908a86381d9f973824680df4e0a75422766272f03b1c0e49db7e79c23db1135
+  racc (1.8.1) sha256=4a7f6929691dbec8b5209a0b373bc2614882b55fc5d2e447a21aaa691303d62f
+  rake (13.4.2) sha256=cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701
+  rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
   rss (0.3.1)
-  sanitize (6.1.0) sha256=92fcd93c9c50c72ba6866465b93a593eef98b43382b33d451f9606087c015c73
-  sequel (5.81.0) sha256=7956f4507ce3363a0e2d2d268578f1ea5a9da992d5e4bf431bf155f0f7dda7fa
-  sqlite3 (2.0.2) sha256=326e53ffb89d050eb00274945078ff7af9026594a7031874af4e9f172cf6154d
-  sqlite3 (2.0.2-x86_64-linux-gnu) sha256=15dbf6f47755acb063c5b71a2dd6c65ba582eab3e0d9d4e95cde737120333efb
-  strscan (3.1.0) sha256=01b8a81d214fbf7b5308c6fb51b5972bbfc4a6aa1f166fd3618ba97e0fcd5555
-  timers (4.3.5) sha256=f7d87656363f78f66438183c000ef9f49057ad91bcbf91f5dbdcbb5fed8d5f5e
+  sanitize (7.0.0) sha256=269d1b9d7326e69307723af5643ec032ff86ad616e72a3b36d301ac75a273984
+  sequel (5.105.0) sha256=4191d5e5d011b7229ff8a3401ca6beac047c4d35b1ec6703376513b4b25b2e67
+  sqlite3 (2.9.5) sha256=04572973a3f943ad50a8adfffc8dd752a5f06e4c3db2026f71838fed8a982606
+  sqlite3 (2.9.5-x86_64-linux-gnu) sha256=233dbcb6714148dd23bc5aeb33e8efd6eac974969564ddd5794c23d5f52b231e
+  timers (4.4.0) sha256=a92f43cbec26219b17a52c86501557486569bd5d01975cbca4315203cfc0ade7
   tty-color (0.6.0) sha256=6f9c37ca3a4e2367fb2e6d09722762647d6f455c111f05b59f35730eeb24332a
   tty-cursor (0.7.1) sha256=79534185e6a777888d88628b14b6a1fdf5154a603f285f80b1753e1908e0bf48
   tty-prompt (0.23.1) sha256=fcdbce905238993f27eecfdf67597a636bc839d92192f6a0eef22b8166449ec8
   tty-reader (0.9.0) sha256=c62972c985c0b1566f0e56743b6a7882f979d3dc32ff491ed490a076f899c2b1
   tty-screen (0.8.2) sha256=c090652115beae764336c28802d633f204fb84da93c6a968aa5d8e319e819b50
-  uri (0.13.0) sha256=26553c2a9399762e1e8bebd4444b4361c4b21298cf1c864b22eeabc9c4998f24
+  uri (1.1.1) sha256=379fa58d27ffb1387eaada68c749d1426738bd0f654d812fcc07e7568f5c57c6
   wisper (2.0.1) sha256=ce17bc5c3a166f241a2e6613848b025c8146fce2defba505920c1d1f3f88fae6
 
 BUNDLED WITH
