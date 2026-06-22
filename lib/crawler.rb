@@ -17,6 +17,7 @@ class Discodancer
           next
         end
 
+        first_fetch = website.last_updated_at.nil?
         found_new = false
         last_updated_at = website.last_updated_at || Time.parse("2000-01-01 00:00:00")
         begin
@@ -30,10 +31,14 @@ class Discodancer
           found_new = !new_entries.empty?
           new_entries.each do |entry|
             last_updated_at = entry.updated.content.localtime if entry.updated.content.localtime >= last_updated_at
+            next if first_fetch # 初回fetchはbaseline記録のみ。履歴は投稿しない
             website.webhooks.each do |webhook|
               @logger.info "Post entry to webhook id:#{webhook.id} #{webhook.workspace} ##{webhook.channel}"
               webhook.post!(website, entry)
             end
+          end
+          if first_fetch && found_new
+            @logger.info "First fetch for website id:#{website.id} #{website.name}: seeded baseline at #{last_updated_at}, skipped posting #{new_entries.size} entries"
           end
           website.last_updated_at = last_updated_at
         rescue => e
